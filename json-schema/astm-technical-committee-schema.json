@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/json-schema/astm-technical-committee-schema.json",
+  "title": "ASTM Technical Committee",
+  "description": "Representation of an ASTM technical committee or subcommittee: the volunteer body that owns and develops a defined slice of the ASTM standards portfolio.",
+  "type": "object",
+  "required": ["designation", "name", "letterPrefix"],
+  "properties": {
+    "designation": {
+      "type": "string",
+      "description": "Committee or subcommittee designation. Top-level committees use Letter+Number (e.g., 'F42'); subcommittees append a dotted segment (e.g., 'F42.04').",
+      "pattern": "^[A-GJ][0-9]{1,4}([.][0-9]{1,3})?$",
+      "examples": ["A01", "C09", "D20", "E08", "F42", "F42.04", "J01"]
+    },
+    "letterPrefix": {
+      "type": "string",
+      "description": "Committee category letter.",
+      "enum": ["A", "B", "C", "D", "E", "F", "G", "J"]
+    },
+    "name": {
+      "type": "string",
+      "description": "Full committee or subcommittee name."
+    },
+    "category": {
+      "type": "string",
+      "description": "Plain-language category derived from the letter prefix.",
+      "enum": [
+        "Ferrous Metals And Products",
+        "Nonferrous Metals And Products",
+        "Cementitious Ceramic Concrete And Masonry Materials",
+        "Miscellaneous Materials And Products",
+        "Miscellaneous Subjects",
+        "End-Use Materials And Products",
+        "Corrosion Deterioration Weathering Durability And Degradation",
+        "Joint Committees"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "description": "Scope statement describing the committee's chartered subject area."
+    },
+    "parentCommittee": {
+      "type": "string",
+      "description": "Parent committee designation, for subcommittees.",
+      "pattern": "^[A-GJ][0-9]{1,4}$"
+    },
+    "subcommittees": {
+      "type": "array",
+      "description": "Designations of direct subcommittees.",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-GJ][0-9]{1,4}[.][0-9]{1,3}$"
+      }
+    },
+    "memberCount": {
+      "type": "integer",
+      "description": "Number of volunteer members.",
+      "minimum": 0
+    },
+    "standardsCount": {
+      "type": "integer",
+      "description": "Number of active standards owned by the committee.",
+      "minimum": 0
+    },
+    "established": {
+      "type": "integer",
+      "description": "Year the committee was established.",
+      "minimum": 1898
+    },
+    "chairperson": {
+      "type": "string",
+      "description": "Current chair of the committee."
+    },
+    "staffManager": {
+      "type": "string",
+      "description": "Assigned ASTM staff manager."
+    },
+    "meetingFrequency": {
+      "type": "string",
+      "description": "Frequency of committee meetings.",
+      "examples": ["Semiannual", "Annual"]
+    },
+    "homeUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Public landing page for the committee on astm.org."
+    }
+  },
+  "additionalProperties": false
+}

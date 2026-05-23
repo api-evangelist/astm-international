@@ -1,0 +1,29 @@
+{
+  "designation": "C150/C150M-23",
+  "letterPrefix": "C",
+  "serialNumber": "150/150M",
+  "year": 2023,
+  "title": "Standard Specification for Portland Cement",
+  "documentType": "Specification",
+  "committee": {
+    "designation": "C01",
+    "name": "Cement",
+    "scope": "Promotion of knowledge, stimulation of research, development of standards, methods of test, specifications, classifications, definitions of terms, and recommended practices for hydraulic cements."
+  },
+  "scope": "This specification covers ten types of portland cement, including five basic types and air-entraining and low-alkali variants, intended for use in concrete construction.",
+  "status": "Active",
+  "developedDate": "2023-08-01",
+  "supersedes": ["C150/C150M-22"],
+  "referencedStandards": [
+    {"designation": "C114", "publisher": "ASTM", "title": "Standard Test Methods for Chemical Analysis of Hydraulic Cement"},
+    {"designation": "C151/C151M", "publisher": "ASTM", "title": "Standard Test Method for Autoclave Expansion of Hydraulic Cement"},
+    {"designation": "C204", "publisher": "ASTM", "title": "Standard Test Methods for Fineness of Hydraulic Cement by Air-Permeability Apparatus"}
+  ],
+  "icsCodes": ["91.100.10"],
+  "pages": 9,
+  "languages": ["en"],
+  "doi": "10.1520/C0150_C0150M-23",
+  "storeUrl": "https://store.astm.org/c0150_c0150m-23.html",
+  "compassUrl": "https://compass.astm.org/document/?contentCode=ASTM%7CC0150_C0150M-23%7Cen-US",
+  "keywords": ["air-entraining", "hydraulic cement", "low-alkali", "portland cement", "specification"]
+}

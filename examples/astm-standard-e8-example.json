@@ -1,0 +1,28 @@
+{
+  "designation": "E8/E8M-22",
+  "letterPrefix": "E",
+  "serialNumber": "8/8M",
+  "year": 2022,
+  "title": "Standard Test Methods for Tension Testing of Metallic Materials",
+  "documentType": "TestMethod",
+  "committee": {
+    "designation": "E28",
+    "name": "Mechanical Testing",
+    "scope": "Development of standards covering the mechanical testing of metallic and non-metallic materials."
+  },
+  "scope": "These test methods cover the tension testing of metallic materials in any form at room temperature, specifically the methods of determination of yield strength, yield point elongation, tensile strength, elongation, and reduction of area.",
+  "status": "Active",
+  "developedDate": "2022-05-01",
+  "supersedes": ["E8/E8M-21"],
+  "referencedStandards": [
+    {"designation": "A370", "publisher": "ASTM", "title": "Standard Test Methods and Definitions for Mechanical Testing of Steel Products"},
+    {"designation": "E4", "publisher": "ASTM", "title": "Standard Practices for Force Verification of Testing Machines"},
+    {"designation": "E83", "publisher": "ASTM", "title": "Standard Practice for Verification and Classification of Extensometer Systems"}
+  ],
+  "icsCodes": ["77.040.10"],
+  "pages": 30,
+  "languages": ["en"],
+  "doi": "10.1520/E0008_E0008M-22",
+  "storeUrl": "https://store.astm.org/e0008_e0008m-22.html",
+  "keywords": ["elongation", "reduction of area", "tensile strength", "tension test", "yield strength"]
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-structure.org/draft/2025-09",
+  "name": "AstmStandard",
+  "description": "JSON Structure for an ASTM consensus standard catalog record. Captures designation, ownership, document type, lifecycle, and access surfaces.",
+  "type": "object",
+  "properties": {
+    "designation": {
+      "type": "string",
+      "description": "ASTM designation in Letter+Number-Year form (e.g., C150-23, E8/E8M-22)."
+    },
+    "letterPrefix": {
+      "type": "string",
+      "description": "Committee category letter A B C D E F G or J."
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Numeric portion of the designation; may include metric companion."
+    },
+    "year": {
+      "type": "int32",
+      "description": "Edition year."
+    },
+    "title": {
+      "type": "string",
+      "description": "Official title beginning with the document type."
+    },
+    "documentType": {
+      "type": "string",
+      "description": "TestMethod, Specification, Practice, Guide, Classification, or Terminology."
+    },
+    "committee": {
+      "type": "object",
+      "description": "Owning committee or subcommittee.",
+      "properties": {
+        "designation": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "scope": {
+      "type": "string",
+      "description": "Section 1 scope statement."
+    },
+    "status": {
+      "type": "string",
+      "description": "Active, Historical, Withdrawn, Superseded, or InDevelopment."
+    },
+    "supersedes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Designations of superseded editions."
+    },
+    "referencedStandards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "designation": { "type": "string" },
+          "publisher": { "type": "string" }
+        }
+      }
+    },
+    "icsCodes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "pages": {
+      "type": "int32"
+    },
+    "doi": {
+      "type": "string"
+    },
+    "storeUrl": {
+      "type": "string"
+    },
+    "compassUrl": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

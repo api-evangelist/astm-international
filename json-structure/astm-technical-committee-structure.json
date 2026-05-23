@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/draft/2025-09",
+  "name": "AstmTechnicalCommittee",
+  "description": "JSON Structure for an ASTM technical committee or subcommittee record.",
+  "type": "object",
+  "properties": {
+    "designation": {
+      "type": "string",
+      "description": "Letter+Number, optionally subcommittee-suffixed (e.g., F42 or F42.04)."
+    },
+    "letterPrefix": { "type": "string" },
+    "name": { "type": "string" },
+    "category": { "type": "string" },
+    "scope": { "type": "string" },
+    "parentCommittee": { "type": "string" },
+    "subcommittees": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "memberCount": { "type": "int32" },
+    "standardsCount": { "type": "int32" },
+    "established": { "type": "int32" },
+    "chairperson": { "type": "string" },
+    "staffManager": { "type": "string" },
+    "meetingFrequency": { "type": "string" },
+    "homeUrl": { "type": "string" }
+  }
+}

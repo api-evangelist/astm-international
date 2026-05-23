@@ -1,0 +1,27 @@
+{
+  "designation": "F3001-14(2021)",
+  "letterPrefix": "F",
+  "serialNumber": "3001",
+  "year": 2014,
+  "title": "Standard Specification for Additive Manufacturing Titanium-6 Aluminum-4 Vanadium ELI (Extra Low Interstitial) with Powder Bed Fusion",
+  "documentType": "Specification",
+  "committee": {
+    "designation": "F42",
+    "name": "Additive Manufacturing Technologies",
+    "scope": "Promotion of knowledge, stimulation of research, and development of standards for additive manufacturing technologies."
+  },
+  "scope": "This specification covers additively manufactured titanium-6 aluminum-4 vanadium ELI (Extra Low Interstitial) components produced via powder bed fusion processes, intended for use in surgical implants and aerospace applications.",
+  "status": "Active",
+  "developedDate": "2021-03-01",
+  "supersedes": ["F3001-14"],
+  "referencedStandards": [
+    {"designation": "F2924", "publisher": "ASTM", "title": "Standard Specification for Additive Manufacturing Titanium-6 Aluminum-4 Vanadium with Powder Bed Fusion"},
+    {"designation": "ISO/ASTM 52900", "publisher": "ASTM", "title": "Additive manufacturing - General principles - Fundamentals and vocabulary"}
+  ],
+  "icsCodes": ["25.030"],
+  "pages": 8,
+  "languages": ["en"],
+  "doi": "10.1520/F3001-14R21",
+  "storeUrl": "https://store.astm.org/f3001-14r21.html",
+  "keywords": ["additive manufacturing", "powder bed fusion", "titanium alloy", "Ti-6Al-4V ELI"]
+}

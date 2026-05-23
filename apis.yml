@@ -1,0 +1,373 @@
+aid: astm-international
+name: ASTM International
+description: >-
+  ASTM International is one of the world's largest voluntary standards
+  development organizations, founded in 1898. ASTM publishes more than
+  13,000 globally recognized consensus standards across 150+ technical
+  committees and 2,100+ subcommittees, developed by 30,000+ volunteer
+  members from 140+ countries. ASTM standards span ferrous and nonferrous
+  metals, cement and concrete, petroleum, plastics, textiles, additive
+  manufacturing, medical devices, consumer products, unmanned aircraft,
+  artificial intelligence in manufacturing, and dozens of other domains.
+  Standards are delivered through the ASTM Compass platform, ASTM Digital
+  Library, ASTM SpecBuilder, and through publisher and reseller channels.
+  ASTM does not publish a public REST API for its catalog; integration with
+  Compass is via SAML SSO, Shibboleth, OpenAthens, and IP authentication.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Standards
+  - Standards Development Organization
+  - Consensus Standards
+  - Technical Committees
+  - Materials Testing
+  - Specifications
+  - Test Methods
+  - Certification
+  - Voluntary Standards
+  - International
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis:
+  - aid: astm-international:astm-compass
+    name: ASTM Compass
+    description: >-
+      ASTM Compass is the subscription digital library and workflow platform
+      that delivers ASTM standards alongside third-party publisher content
+      (AASHTO, API, BSI, etc.), books, journals, papers, and video standards.
+      Compass supports version comparison (color-coded redlines), change alerts,
+      annotations, attachments, sharing, and Compass Points metadata tagging.
+      It is delivered as a subscription service to enterprises, libraries, and
+      universities, and integrates with customer identity systems via SAML SSO,
+      Shibboleth, OpenAthens, and IP-range authentication. There is no public
+      REST API for the Compass content catalog; integration is identity-only.
+    humanURL: https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass
+    baseURL: https://compass.astm.org
+    tags:
+      - Standards
+      - Digital Library
+      - Subscription
+      - Redlines
+      - Change Alerts
+      - Annotations
+      - Enterprise Solutions
+    properties:
+      - type: Documentation
+        url: https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass
+      - type: Application
+        url: https://compass.astm.org
+      - type: SignIn
+        url: https://compass.astm.org/?fromLogin=true
+      - type: SSO
+        url: https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass
+        title: SAML, Shibboleth, OpenAthens, IP Authentication
+      - type: PressRelease
+        url: https://www.astm.org/news/press-releases/astm-expands-compass-access
+        title: ASTM Expands Access to Compass Platform
+  - aid: astm-international:astm-standards-catalog
+    name: ASTM Standards Catalog
+    description: >-
+      The ASTM Standards Catalog is the canonical inventory of 13,000+ ASTM
+      consensus standards organized by technical committee designation
+      (A through G, plus J joint committees). Each standard carries a
+      designation in the form Letter+Number-Year (for example C150-23,
+      D695-23, E8/E8M-22). Standards are categorized into six normative
+      document types: Test Method, Specification, Practice, Guide,
+      Classification, and Terminology. The catalog is browsable on the
+      ASTM store and ASTM Compass; bulk programmatic access is not offered.
+    humanURL: https://store.astm.org/products-services/standards-and-publications/standards/standards-category-list.html
+    tags:
+      - Standards
+      - Catalog
+      - Designation System
+      - Technical Committees
+      - Document Types
+    properties:
+      - type: Documentation
+        url: https://store.astm.org/products-services/standards-and-publications/standards/standards-category-list.html
+      - type: FormAndStyle
+        url: https://www.astm.org/membership-participation/technical-committees/key-documents/form-and-style-for-astm-standards
+        title: Form and Style for ASTM Standards (defines the six standard types)
+      - type: TechnicalCommittees
+        url: https://www.astm.org/membership-participation/technical-committees/committee-all
+        title: Full list of ASTM Technical Committees
+  - aid: astm-international:astm-digital-library
+    name: ASTM Digital Library
+    description: >-
+      The ASTM Digital Library is the historical archive of ASTM-published
+      books, technical papers, manuals, monographs, journals, and Selected
+      Technical Papers (STPs) dating back to 1932. The library aggregates
+      1,500+ books and 47,000+ articles and is accessed through ASTM Compass
+      or direct subscription. Integration uses the same identity surfaces as
+      Compass; no programmatic search API is documented publicly.
+    humanURL: https://www.astm.org/products-services/digital-library
+    tags:
+      - Digital Library
+      - Books
+      - Journals
+      - Technical Papers
+      - Archive
+    properties:
+      - type: Documentation
+        url: https://www.astm.org/products-services/digital-library
+  - aid: astm-international:astm-specbuilder
+    name: ASTM SpecBuilder
+    description: >-
+      ASTM SpecBuilder is a tool for assembling, packaging, and delivering
+      customized digital collections of ASTM standards content for
+      enterprise teams and educational programs. It is positioned as part
+      of ASTM's enterprise content delivery and digital collaboration
+      surface. SpecBuilder is not exposed as a public API.
+    humanURL: https://www.astm.org/standards-and-solutions/enterprise-solutions
+    tags:
+      - Content Delivery
+      - Custom Collections
+      - Enterprise Solutions
+    properties:
+      - type: Documentation
+        url: https://www.astm.org/standards-and-solutions/enterprise-solutions
+  - aid: astm-international:astm-proficiency-testing
+    name: ASTM Proficiency Testing Programs
+    description: >-
+      ASTM operates more than 25 interlaboratory proficiency testing (PT)
+      programs covering petroleum products, cement, plastics, and other
+      materials. Labs subscribe to receive samples, submit results, and
+      receive statistical reports benchmarked against peers. PT results are
+      delivered through ASTM's proficiency testing portal; no public REST
+      API is published.
+    humanURL: https://www.astm.org/products-services/proficiency-testing-programs
+    tags:
+      - Proficiency Testing
+      - Interlaboratory
+      - Laboratory Services
+      - Quality
+    properties:
+      - type: Documentation
+        url: https://www.astm.org/products-services/proficiency-testing-programs
+  - aid: astm-international:astm-training-and-certification
+    name: ASTM Training and Certification
+    description: >-
+      ASTM operates a global training and personnel certification program
+      across additive manufacturing (via the AM CoE with Auburn University),
+      cannabis, cement, and other technical domains. Training is delivered
+      in-person, virtually, and on-demand; certifications follow ISO/IEC
+      17024-aligned conformity assessment processes.
+    humanURL: https://www.astm.org/products-services/training-courses
+    tags:
+      - Training
+      - Certification
+      - Personnel Certification
+      - Conformity Assessment
+    properties:
+      - type: Documentation
+        url: https://www.astm.org/products-services/training-courses
+common:
+  - type: Website
+    url: https://www.astm.org
+    title: ASTM International
+  - type: About
+    url: https://www.astm.org/about
+    title: About ASTM
+  - type: Governance
+    url: https://www.astm.org/about/governance.html
+    title: Governance
+  - type: Store
+    url: https://store.astm.org
+    title: ASTM Store
+  - type: News
+    url: https://www.astm.org/news
+    title: ASTM News
+  - type: PressReleases
+    url: https://www.astm.org/news/press-releases
+    title: ASTM Press Releases
+  - type: StandardizationNews
+    url: https://sn.astm.org
+    title: Standardization News Magazine
+  - type: Membership
+    url: https://www.astm.org/get-involved/membership
+    title: Membership
+  - type: TechnicalCommittees
+    url: https://www.astm.org/get-involved/technical-committees
+    title: Technical Committees Landing
+  - type: TechnicalCommitteesFullList
+    url: https://www.astm.org/membership-participation/technical-committees/committee-all
+    title: Full Committee List
+  - type: FormAndStyle
+    url: https://www.astm.org/membership-participation/technical-committees/key-documents/form-and-style-for-astm-standards
+    title: Form and Style for ASTM Standards
+  - type: Standards
+    url: https://store.astm.org/products-services/standards-and-publications/standards.html
+    title: Standards and Publications
+  - type: StandardsByCategory
+    url: https://store.astm.org/products-services/standards-and-publications/standards/standards-category-list.html
+    title: Standards by Category
+  - type: ASTMCompass
+    url: https://compass.astm.org
+    title: ASTM Compass Application
+  - type: DigitalLibrary
+    url: https://www.astm.org/products-services/digital-library
+    title: ASTM Digital Library
+  - type: EnterpriseSolutions
+    url: https://www.astm.org/standards-and-solutions/enterprise-solutions
+    title: Enterprise Solutions
+  - type: ProficiencyTesting
+    url: https://www.astm.org/products-services/proficiency-testing-programs
+    title: Proficiency Testing Programs
+  - type: TrainingCourses
+    url: https://www.astm.org/products-services/training-courses
+    title: Training Courses
+  - type: AdditiveManufacturingCoE
+    url: https://amcoe.org
+    title: ASTM AM Center of Excellence
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/astm-international
+    title: ASTM International on LinkedIn
+  - type: YouTube
+    url: https://www.youtube.com/user/ASTMIntl
+    title: ASTM International on YouTube
+  - type: Features
+    data:
+      - name: Consensus Standards Development
+        description: >-
+          ASTM develops voluntary, consensus-based standards through 150+
+          technical committees and 2,100+ subcommittees made up of 30,000+
+          volunteer members from 140+ countries.
+      - name: Six Normative Document Types
+        description: >-
+          ASTM's Form and Style defines six standard types — Test Method,
+          Specification, Practice, Guide, Classification, and Terminology —
+          each with prescribed scope and authoring conventions.
+      - name: Committee Designation System
+        description: >-
+          Standards carry a letter-prefix designation tied to the committee
+          that owns them: A (ferrous metals), B (nonferrous metals), C
+          (cementitious/ceramic/concrete/masonry), D (miscellaneous
+          materials), E (miscellaneous subjects), F (end-use materials and
+          products), G (corrosion/weathering/degradation), and J (joint
+          committees with other SDOs).
+      - name: ASTM Compass Platform
+        description: >-
+          Subscription digital library delivering 13,000+ standards plus
+          1,500+ books and 47,000+ papers, with redlines, change alerts,
+          annotations, Compass Points metadata, and SAML SSO integration.
+      - name: International Recognition
+        description: >-
+          ASTM standards are referenced in regulations and procurement in
+          150+ countries through Memoranda of Understanding with national
+          standards bodies and government agencies.
+      - name: Proficiency Testing Programs
+        description: >-
+          25+ interlaboratory proficiency testing programs for petroleum,
+          cement, plastics, and other materials with statistical benchmarking.
+      - name: Personnel Certification
+        description: >-
+          ISO/IEC 17024-aligned personnel certification programs in additive
+          manufacturing, cannabis, cement, and other technical domains.
+  - type: UseCases
+    data:
+      - name: Procurement and Specification
+        description: >-
+          Engineers and procurement teams cite ASTM designations (for
+          example ASTM A36 structural steel or ASTM C150 portland cement)
+          in purchasing contracts to define acceptance criteria.
+      - name: Regulatory Compliance
+        description: >-
+          Government agencies and regulators incorporate ASTM standards by
+          reference into building codes, safety regulations, and product
+          conformity requirements.
+      - name: Laboratory Test Methods
+        description: >-
+          Testing laboratories run ASTM Test Method standards to produce
+          legally defensible measurements of material properties and
+          product performance.
+      - name: Standards Surveillance
+        description: >-
+          Compliance teams subscribe to ASTM Compass change alerts to
+          track new editions, withdrawals, and redlined revisions of
+          standards they depend on.
+      - name: Additive Manufacturing Qualification
+        description: >-
+          F42 standards (additive manufacturing) and the ASTM AM Center
+          of Excellence provide qualification frameworks for aerospace,
+          medical, and defense AM applications.
+      - name: Cannabis Industry Standards
+        description: >-
+          Committee D37 (Cannabis) provides standards for quality,
+          testing, and product specifications adopted by cannabis
+          regulators in the US, Canada, and other jurisdictions.
+  - type: Integrations
+    data:
+      - name: SAML 2.0 Single Sign-On
+        description: >-
+          ASTM Compass supports any SAML-based SSO connection for
+          enterprise identity providers; provisioning is configured by
+          ASTM on the production environment.
+      - name: Shibboleth
+        description: >-
+          Compass accepts Shibboleth federated identity without
+          configuration on the customer side.
+      - name: OpenAthens
+        description: >-
+          Compass accepts OpenAthens federated identity, common in
+          university and library deployments.
+      - name: IP-Range Authentication
+        description: >-
+          Enterprise and library subscribers can authenticate users by
+          IP range without per-user provisioning.
+      - name: Okta and Other IdPs
+        description: >-
+          Customer implementations include Okta-based SSO (for example,
+          Virginia DOT) for one-click access to Compass.
+      - name: Third-Party Publisher Content
+        description: >-
+          Compass aggregates third-party standards from AASHTO, API,
+          BSI, and other publishers behind the same subscription and
+          identity layer.
+  - type: ScaleNumbers
+    data:
+      - name: Standards Published
+        description: 13,000+ globally recognized consensus standards.
+      - name: Technical Committees
+        description: 150+ technical committees and 2,100+ subcommittees.
+      - name: Volunteer Members
+        description: 30,000+ volunteer members.
+      - name: Countries
+        description: Members and partners across 140+ countries; MoUs with 125+ national standards bodies.
+      - name: Founded
+        description: 1898.
+      - name: Compass Catalog
+        description: 13,000+ standards, 1,500+ books, 47,000+ articles and papers, 300+ video standards.
+  - type: NotableAbsences
+    data:
+      - name: No Public REST API
+        description: >-
+          ASTM does not publish a public REST API for its standards
+          catalog, Compass content, or proficiency testing results.
+          Programmatic access is not offered to the general public.
+      - name: No Public GitHub Organization
+        description: >-
+          ASTM International does not maintain a public GitHub
+          organization. There are no canonical reference implementations,
+          schemas, or SDKs published openly.
+      - name: No OpenAPI or AsyncAPI Specs
+        description: >-
+          No OpenAPI or AsyncAPI specifications are published by ASTM
+          for any of its services.
+      - name: No Public Pricing Page
+        description: >-
+          Compass and Digital Library pricing is sales-quoted; no
+          published price list is available.
+      - name: No RSS or Atom Feeds
+        description: >-
+          Press releases and standards updates are not exposed through
+          public RSS or Atom feeds for syndication.
+      - name: No Public Webhooks
+        description: >-
+          Compass change alerts are delivered to subscribers via email
+          inside the application; no outbound webhook surface exists.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

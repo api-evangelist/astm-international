@@ -1,0 +1,217 @@
+name: ASTM International Vocabulary
+description: >-
+  Controlled vocabulary covering the core terms, document types, committee
+  taxonomy, and platform surfaces of ASTM International. Sourced from
+  ASTM's own Form and Style for ASTM Standards, the public Technical
+  Committees full list, and the ASTM Compass and Digital Library
+  documentation. All tags use Title Case.
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/vocabulary/astm-international-vocabulary.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+
+organization:
+  name: ASTM International
+  founded: 1898
+  description: >-
+    Voluntary consensus standards development organization headquartered
+    in West Conshohocken, Pennsylvania, USA, developing standards through
+    150+ technical committees and 2,100+ subcommittees worldwide.
+  motto: Helping Our World Work Better
+
+documentTypes:
+  description: >-
+    The six normative document types defined in ASTM's Form and Style
+    for ASTM Standards. Every published ASTM standard is exactly one of
+    these types and the title begins with the type name.
+  terms:
+    - term: Test Method
+      definition: >-
+        A definitive procedure that produces a test result. Used for
+        identification, measurement, and evaluation of qualities,
+        characteristics, or properties.
+      examples: ["ASTM E8/E8M-22", "ASTM D695-23"]
+    - term: Specification
+      definition: >-
+        An explicit set of requirements to be satisfied by a material,
+        product, system, or service, identifying the test methods used
+        to verify conformance.
+      examples: ["ASTM C150-23", "ASTM A36/A36M-19", "ASTM F3001-14(2021)"]
+    - term: Practice
+      definition: >-
+        A set of instructions for performing one or more specific
+        operations that does not produce a test result. Covers
+        application, assessment, cleaning, collection, decontamination,
+        inspection, installation, preparation, sampling, screening, and
+        training activities.
+    - term: Guide
+      definition: >-
+        A compendium of information or series of options that does not
+        recommend a specific course of action; increases awareness of
+        information and approaches in a subject area.
+    - term: Classification
+      definition: >-
+        A systematic arrangement or division of materials, products,
+        systems, or services into groups based on similar characteristics
+        such as origin, composition, properties, or use.
+    - term: Terminology
+      definition: >-
+        A document comprising definitions of terms; explanations of
+        symbols, abbreviations, or acronyms.
+
+committeeCategories:
+  description: >-
+    Letter-prefix categories assigned to top-level ASTM technical
+    committees. Every standard inherits its letter prefix from the
+    owning committee.
+  terms:
+    - letter: A
+      category: Ferrous Metals And Products
+      description: Steel, stainless steel, iron castings, magnetic properties.
+      examples: ["A01 - Steel, Stainless Steel and Related Alloys", "A04 - Iron Castings", "A05 - Metallic-Coated Iron and Steel Products", "A06 - Magnetic Properties"]
+    - letter: B
+      category: Nonferrous Metals And Products
+      description: Copper, aluminum, light and reactive metals, electrical conductors, powders.
+      examples: ["B01 - Electrical Conductors", "B02 - Nonferrous Metals and Alloys", "B05 - Copper and Copper Alloys", "B07 - Light Metals and Alloys", "B09 - Metal Powders and Metal Powder Products", "B10 - Reactive and Refractory Metals and Alloys"]
+    - letter: C
+      category: Cementitious Ceramic Concrete And Masonry Materials
+      description: Cement, concrete, ceramics, refractories, glass, masonry, thermal insulation.
+      examples: ["C01 - Cement", "C09 - Concrete and Concrete Aggregates", "C11 - Gypsum and Related Building Materials", "C16 - Thermal Insulation", "C26 - Nuclear Fuel Cycle", "C28 - Advanced Ceramics"]
+    - letter: D
+      category: Miscellaneous Materials And Products
+      description: Petroleum, plastics, rubber, textiles, paints, wood, water, air quality, composites, cannabis, hemp.
+      examples: ["D01 - Paint and Related Coatings", "D02 - Petroleum Products, Liquid Fuels, and Lubricants", "D11 - Rubber", "D13 - Textiles", "D19 - Water", "D20 - Plastics", "D22 - Air Quality", "D30 - Composite Materials", "D37 - Cannabis and Hemp"]
+    - letter: E
+      category: Miscellaneous Subjects
+      description: Test methodology, statistics, fire, nondestructive testing, healthcare informatics, nanotechnology, sustainability, forensic sciences.
+      examples: ["E05 - Fire Standards", "E07 - Nondestructive Testing", "E11 - Quality and Statistics", "E28 - Mechanical Testing", "E30 - Forensic Sciences", "E31 - Healthcare Informatics", "E54 - Homeland Security Applications", "E56 - Nanotechnology", "E60 - Sustainability"]
+    - letter: F
+      category: End-Use Materials And Products
+      description: Medical devices, aerospace, sports equipment, consumer products, footwear, additive manufacturing, robotics, AI in manufacturing.
+      examples: ["F04 - Medical and Surgical Materials and Devices", "F07 - Aerospace and Aircraft", "F15 - Consumer Products", "F38 - Unmanned Aircraft Systems", "F42 - Additive Manufacturing Technologies", "F45 - Robotics, Automation, and Autonomous Systems", "F47 - Commercial Spaceflight", "F50 - Artificial Intelligence in Manufacturing Systems"]
+    - letter: G
+      category: Corrosion Deterioration Weathering Durability And Degradation
+      description: Material durability, corrosion, tribology, weathering, oxygen-rich-environment compatibility.
+      examples: ["G01 - Corrosion of Metals", "G02 - Tribology of Solid Materials", "G03 - Weathering and Durability", "G04 - Compatibility and Sensitivity of Materials in Oxygen Enriched Atmospheres"]
+    - letter: J
+      category: Joint Committees
+      description: Joint committees with other standards development organizations.
+      examples: ["J01 - Joint ASTM/NACE Committee on Corrosion"]
+
+designationFormat:
+  description: >-
+    The canonical ASTM designation form. Each standard is uniquely
+    identified by its designation, which encodes its committee
+    category, sequential serial number, and current edition year.
+  pattern: "Letter+Number-Year"
+  components:
+    - name: Letter
+      description: Committee category letter A through G or J.
+    - name: Number
+      description: >-
+        Sequential serial number unique within the letter prefix.
+        Standards with both US-customary and SI-metric editions use a
+        slash-M suffix (e.g., E8/E8M, A36/A36M).
+    - name: Year
+      description: >-
+        Two- or four-digit year of the current edition. Reapproval is
+        shown as (YYYY) appended to the year.
+  examples:
+    - C150-23
+    - C150/C150M-23
+    - E8/E8M-22
+    - F3001-14(2021)
+    - A36/A36M-19
+
+standardLifecycle:
+  description: Lifecycle states a standard moves through.
+  terms:
+    - term: In Development
+      definition: Draft under active subcommittee work.
+    - term: Active
+      definition: Published current edition.
+    - term: Reapproved
+      definition: Active edition reviewed and reapproved without revision.
+    - term: Superseded
+      definition: Replaced by a newer edition.
+    - term: Historical
+      definition: Prior edition retained in the catalog for reference.
+    - term: Withdrawn
+      definition: Removed from the active catalog without replacement.
+
+platforms:
+  description: ASTM-operated platforms that deliver standards content and services.
+  terms:
+    - name: ASTM Compass
+      description: >-
+        Subscription digital library combining 13,000+ standards with
+        1,500+ books and 47,000+ articles plus custom workflow tools.
+      url: https://compass.astm.org
+    - name: ASTM Digital Library
+      description: Historical archive of ASTM books, journals, and papers since 1932.
+      url: https://www.astm.org/products-services/digital-library
+    - name: ASTM Store
+      description: Per-document purchase storefront.
+      url: https://store.astm.org
+    - name: ASTM SpecBuilder
+      description: Custom standards collection assembly and delivery tool.
+    - name: Standardization News
+      description: Quarterly magazine on ASTM activities and standards.
+      url: https://sn.astm.org
+
+participationRoles:
+  description: Roles in ASTM committee participation.
+  terms:
+    - term: Producer
+      definition: Member representing manufacturers of products covered by the standard.
+    - term: User
+      definition: Member representing buyers and users of products covered by the standard.
+    - term: General Interest
+      definition: Member with no direct financial interest in the products (academia, government, consultants).
+    - term: Consumer
+      definition: Member representing end consumers of products covered by the standard.
+
+identityIntegrations:
+  description: Authentication surfaces ASTM Compass supports for subscriber access.
+  terms:
+    - term: SAML
+      definition: Any SAML 2.0-based SSO connection can be configured for production by ASTM.
+    - term: Shibboleth
+      definition: Federated identity supported without customer-side configuration.
+    - term: OpenAthens
+      definition: Federated identity common in university and library deployments.
+    - term: IP-Range Authentication
+      definition: Authentication by source IP CIDR block for enterprise and library sites.
+
+scaleFigures:
+  description: Public scale figures published by ASTM (verified against astm.org).
+  terms:
+    - figure: Standards Published
+      value: 13000+
+    - figure: Technical Committees
+      value: 150+
+    - figure: Subcommittees
+      value: 2100+
+    - figure: Volunteer Members
+      value: 30000+
+    - figure: Member Countries
+      value: 140+
+    - figure: MoU Partner Countries
+      value: 125
+    - figure: Books In Compass
+      value: 1500+
+    - figure: Articles And Papers In Compass
+      value: 47000+
+    - figure: Video Standards
+      value: 300+
+    - figure: Founded
+      value: 1898
+
+sources:
+  - https://www.astm.org
+  - https://www.astm.org/about
+  - https://www.astm.org/membership-participation/technical-committees/committee-all
+  - https://www.astm.org/membership-participation/technical-committees/key-documents/form-and-style-for-astm-standards
+  - https://store.astm.org/products-services/standards-and-publications/standards.html
+  - https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass
+  - https://compass.astm.org

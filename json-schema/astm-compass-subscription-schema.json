@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/json-schema/astm-compass-subscription-schema.json",
+  "title": "ASTM Compass Subscription",
+  "description": "Representation of a customer subscription to the ASTM Compass platform, including the licensed content collections, identity integration, seat model, and term.",
+  "type": "object",
+  "required": ["accountId", "organizationName", "collections", "authentication"],
+  "properties": {
+    "accountId": {
+      "type": "string",
+      "description": "ASTM-assigned account identifier."
+    },
+    "organizationName": {
+      "type": "string",
+      "description": "Subscribing organization name."
+    },
+    "organizationType": {
+      "type": "string",
+      "description": "Type of subscribing organization.",
+      "enum": ["Enterprise", "Library", "University", "GovernmentAgency", "ResearchInstitute", "Laboratory"]
+    },
+    "collections": {
+      "type": "array",
+      "description": "ASTM content collections included in the subscription.",
+      "items": {
+        "type": "object",
+        "required": ["collectionId", "name"],
+        "properties": {
+          "collectionId": { "type": "string" },
+          "name": { "type": "string", "examples": ["Full ASTM Standards", "ASTM Section 04 - Construction", "Petroleum Standards", "Additive Manufacturing Collection"] },
+          "publisher": { "type": "string", "examples": ["ASTM", "AASHTO", "API", "BSI"] },
+          "standardsCount": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "authentication": {
+      "type": "object",
+      "description": "Identity integration configured for this subscription.",
+      "required": ["method"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": ["SAML", "Shibboleth", "OpenAthens", "IPRange", "UsernamePassword"]
+        },
+        "samlEntityId": {
+          "type": "string",
+          "description": "SAML entity ID, when method is SAML."
+        },
+        "ipRanges": {
+          "type": "array",
+          "items": { "type": "string", "description": "CIDR block authorized for IP-range authentication." }
+        },
+        "identityProvider": {
+          "type": "string",
+          "description": "Customer identity provider name.",
+          "examples": ["Okta", "Azure AD", "PingFederate", "Shibboleth IdP"]
+        }
+      }
+    },
+    "features": {
+      "type": "array",
+      "description": "Compass features enabled for the subscription.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Redlines",
+          "ChangeAlerts",
+          "Annotations",
+          "Attachments",
+          "Sharing",
+          "CompassPoints",
+          "VideoStandards",
+          "TranslatedStandards",
+          "ThirdPartyContent",
+          "OfflineDownload"
+        ]
+      }
+    },
+    "seatModel": {
+      "type": "string",
+      "enum": ["Concurrent", "Named", "Unlimited", "SiteLicense"]
+    },
+    "seatCount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Licensed seat count, when applicable."
+    },
+    "termStart": {
+      "type": "string",
+      "format": "date"
+    },
+    "termEnd": {
+      "type": "string",
+      "format": "date"
+    },
+    "autoRenew": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

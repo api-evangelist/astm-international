@@ -1,0 +1,13 @@
+{
+  "designation": "C01",
+  "letterPrefix": "C",
+  "name": "Cement",
+  "category": "Cementitious Ceramic Concrete And Masonry Materials",
+  "scope": "Promotion of knowledge, stimulation of research, development of standards, methods of test, specifications, classifications, definitions of terms, and recommended practices for hydraulic cements.",
+  "subcommittees": [
+    "C01.10", "C01.13", "C01.20", "C01.22", "C01.23", "C01.25", "C01.26", "C01.27", "C01.28", "C01.29", "C01.30", "C01.31", "C01.40", "C01.43", "C01.45", "C01.48", "C01.91"
+  ],
+  "established": 1902,
+  "meetingFrequency": "Semiannual",
+  "homeUrl": "https://www.astm.org/committee/C01.htm"
+}

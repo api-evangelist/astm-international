@@ -1,0 +1,44 @@
+{
+  "accountId": "ACME-INC-2026",
+  "organizationName": "Acme Engineering Inc.",
+  "organizationType": "Enterprise",
+  "collections": [
+    {
+      "collectionId": "ASTM-FULL",
+      "name": "Full ASTM Standards",
+      "publisher": "ASTM",
+      "standardsCount": 13200
+    },
+    {
+      "collectionId": "ASTM-SEC04",
+      "name": "ASTM Section 04 - Construction",
+      "publisher": "ASTM",
+      "standardsCount": 2400
+    },
+    {
+      "collectionId": "AASHTO-FULL",
+      "name": "AASHTO Standards",
+      "publisher": "AASHTO",
+      "standardsCount": 350
+    }
+  ],
+  "authentication": {
+    "method": "SAML",
+    "samlEntityId": "https://idp.acme.example.com/saml/metadata",
+    "identityProvider": "Okta"
+  },
+  "features": [
+    "Redlines",
+    "ChangeAlerts",
+    "Annotations",
+    "Attachments",
+    "Sharing",
+    "CompassPoints",
+    "ThirdPartyContent"
+  ],
+  "seatModel": "Concurrent",
+  "seatCount": 250,
+  "termStart": "2026-01-01",
+  "termEnd": "2026-12-31",
+  "autoRenew": true
+}

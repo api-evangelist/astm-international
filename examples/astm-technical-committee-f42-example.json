@@ -1,0 +1,15 @@
+{
+  "designation": "F42",
+  "letterPrefix": "F",
+  "name": "Additive Manufacturing Technologies",
+  "category": "End-Use Materials And Products",
+  "scope": "Promotion of knowledge, stimulation of research, and development of standards (classifications, terminology, guides, test methods, specifications, and practices) for additive manufacturing technologies.",
+  "subcommittees": [
+    "F42.01", "F42.04", "F42.05", "F42.06", "F42.07", "F42.08", "F42.91", "F42.95"
+  ],
+  "memberCount": 1100,
+  "standardsCount": 40,
+  "established": 2009,
+  "meetingFrequency": "Semiannual",
+  "homeUrl": "https://www.astm.org/committee/F42.htm"
+}

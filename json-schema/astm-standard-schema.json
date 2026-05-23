@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/json-schema/astm-standard-schema.json",
+  "title": "ASTM Standard",
+  "description": "Canonical representation of a single ASTM International consensus standard, including its designation, committee ownership, document type, scope, lifecycle, and provenance metadata. This schema models the catalog record, not the normative text of the standard itself.",
+  "type": "object",
+  "required": [
+    "designation",
+    "title",
+    "committee",
+    "documentType"
+  ],
+  "properties": {
+    "designation": {
+      "type": "string",
+      "description": "Full ASTM designation in the form Letter+Number-Year, optionally suffixed with editorial revision or reapproval markers. Examples: C150-23, D695-23, E8/E8M-22, A36/A36M-19.",
+      "pattern": "^[A-GJ][0-9]{1,4}([/][A-Z][0-9]{1,4}M)?[-][0-9]{2,4}([a-z]|R[0-9]{2,4})?(\\([0-9]{4}\\))?(e[0-9])?$",
+      "examples": ["C150-23", "D695-23", "E8/E8M-22", "F3001-14", "A36/A36M-19"]
+    },
+    "letterPrefix": {
+      "type": "string",
+      "description": "Single-letter committee category prefix. A = ferrous metals, B = nonferrous metals, C = cementitious/ceramic/concrete/masonry, D = miscellaneous materials and products, E = miscellaneous subjects, F = end-use materials and products, G = corrosion/weathering/durability, J = joint committees.",
+      "enum": ["A", "B", "C", "D", "E", "F", "G", "J"]
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Numeric portion of the designation, unique within the letter prefix. May include a metric companion (e.g., 8/8M).",
+      "examples": ["150", "8/8M", "3001"]
+    },
+    "year": {
+      "type": "integer",
+      "description": "Two- or four-digit year of the current edition.",
+      "minimum": 1898
+    },
+    "title": {
+      "type": "string",
+      "description": "Official title of the standard, beginning with the document type (e.g., 'Standard Test Method for...', 'Standard Specification for...', 'Standard Practice for...')."
+    },
+    "documentType": {
+      "type": "string",
+      "description": "One of the six normative ASTM document types defined in Form and Style for ASTM Standards.",
+      "enum": [
+        "TestMethod",
+        "Specification",
+        "Practice",
+        "Guide",
+        "Classification",
+        "Terminology"
+      ]
+    },
+    "committee": {
+      "type": "object",
+      "description": "Owning technical committee or subcommittee.",
+      "required": ["designation", "name"],
+      "properties": {
+        "designation": {
+          "type": "string",
+          "description": "Committee designation, e.g., 'C01' or 'C01.10'.",
+          "examples": ["C01", "C01.10", "F42.04"]
+        },
+        "name": {
+          "type": "string",
+          "description": "Committee or subcommittee name.",
+          "examples": ["Cement", "Additive Manufacturing Technologies"]
+        },
+        "scope": {
+          "type": "string",
+          "description": "Scope or charter statement of the committee."
+        }
+      }
+    },
+    "scope": {
+      "type": "string",
+      "description": "Section 1 scope statement from the standard itself, defining what the document covers."
+    },
+    "abstract": {
+      "type": "string",
+      "description": "Plain-language abstract or summary suitable for catalog browsing."
+    },
+    "status": {
+      "type": "string",
+      "description": "Current lifecycle status of the standard.",
+      "enum": ["Active", "Historical", "Withdrawn", "Superseded", "InDevelopment"]
+    },
+    "developedDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the current edition was approved."
+    },
+    "supersedes": {
+      "type": "array",
+      "description": "Previous editions or withdrawn standards superseded by this edition.",
+      "items": {
+        "type": "string",
+        "description": "Designation of the superseded edition."
+      }
+    },
+    "referencedStandards": {
+      "type": "array",
+      "description": "ASTM and external standards normatively referenced from this document.",
+      "items": {
+        "type": "object",
+        "required": ["designation"],
+        "properties": {
+          "designation": { "type": "string" },
+          "publisher": {
+            "type": "string",
+            "description": "Publishing SDO if non-ASTM.",
+            "examples": ["ASTM", "ISO", "AASHTO", "API", "BSI"]
+          },
+          "title": { "type": "string" }
+        }
+      }
+    },
+    "icsCodes": {
+      "type": "array",
+      "description": "International Classification for Standards (ICS) codes applied to this document.",
+      "items": { "type": "string" }
+    },
+    "pages": {
+      "type": "integer",
+      "description": "Page count of the published document.",
+      "minimum": 1
+    },
+    "languages": {
+      "type": "array",
+      "description": "Languages in which the standard is published.",
+      "items": { "type": "string" },
+      "default": ["en"]
+    },
+    "storeUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical purchase URL on store.astm.org."
+    },
+    "compassUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Authenticated access URL on compass.astm.org for subscribers."
+    },
+    "doi": {
+      "type": "string",
+      "description": "Digital Object Identifier for the standard, if assigned.",
+      "examples": ["10.1520/C0150-23"]
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Keywords listed in the standard's Keywords section.",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

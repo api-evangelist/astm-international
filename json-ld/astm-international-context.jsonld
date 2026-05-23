@@ -1,0 +1,93 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/vocabulary/astm-international-vocabulary.yml#",
+    "schema": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "astm": "https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/vocabulary/astm-international-vocabulary.yml#",
+
+    "Standard": "astm:Standard",
+    "TechnicalCommittee": "astm:TechnicalCommittee",
+    "Subcommittee": "astm:Subcommittee",
+    "TestMethod": "astm:TestMethod",
+    "Specification": "astm:Specification",
+    "Practice": "astm:Practice",
+    "Guide": "astm:Guide",
+    "Classification": "astm:Classification",
+    "Terminology": "astm:Terminology",
+    "CompassSubscription": "astm:CompassSubscription",
+    "ProficiencyTestingProgram": "astm:ProficiencyTestingProgram",
+
+    "designation": {
+      "@id": "astm:designation",
+      "@type": "xsd:string"
+    },
+    "letterPrefix": "astm:letterPrefix",
+    "serialNumber": "astm:serialNumber",
+    "year": {
+      "@id": "astm:year",
+      "@type": "xsd:gYear"
+    },
+    "title": "schema:name",
+    "documentType": "astm:documentType",
+    "scope": "skos:scopeNote",
+    "abstract": "schema:abstract",
+    "status": "schema:creativeWorkStatus",
+    "developedDate": {
+      "@id": "dcterms:issued",
+      "@type": "xsd:date"
+    },
+    "supersedes": {
+      "@id": "dcterms:replaces",
+      "@type": "@id"
+    },
+    "referencedStandards": {
+      "@id": "dcterms:references",
+      "@type": "@id"
+    },
+    "icsCodes": "astm:icsCode",
+    "doi": {
+      "@id": "schema:identifier",
+      "@type": "xsd:string"
+    },
+    "keywords": "schema:keywords",
+    "storeUrl": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "compassUrl": {
+      "@id": "astm:compassUrl",
+      "@type": "@id"
+    },
+    "committee": {
+      "@id": "astm:ownedBy",
+      "@type": "@id"
+    },
+
+    "parentCommittee": {
+      "@id": "skos:broader",
+      "@type": "@id"
+    },
+    "subcommittees": {
+      "@id": "skos:narrower",
+      "@type": "@id"
+    },
+    "memberCount": "astm:memberCount",
+    "standardsCount": "astm:standardsCount",
+    "established": {
+      "@id": "schema:foundingDate",
+      "@type": "xsd:gYear"
+    },
+    "chairperson": "schema:member",
+    "staffManager": "schema:employee",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    }
+  }
+}
