@@ -14,7 +14,7 @@ description: >-
   ASTM does not publish a public REST API for its catalog; integration with
   Compass is via SAML SSO, Shibboleth, OpenAthens, and IP authentication.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Standards
   - Standards Development Organization
