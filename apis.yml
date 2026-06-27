@@ -59,7 +59,7 @@ apis:
         url: https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass
       - type: Application
         url: https://compass.astm.org
-      - type: SignIn
+      - type: Login
         url: https://compass.astm.org/?fromLogin=true
       - type: SSO
         url: https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass
