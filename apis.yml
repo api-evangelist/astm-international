@@ -165,6 +165,8 @@ apis:
       - type: Documentation
         url: https://www.astm.org/products-services/training-courses
 common:
+  - type: DomainSecurity
+    url: security/astm-international-domain-security.yml
   - type: Website
     url: https://www.astm.org
     title: ASTM International
