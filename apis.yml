@@ -14,7 +14,18 @@ description: >-
   ASTM does not publish a public REST API for its catalog; integration with
   Compass is via SAML SSO, Shibboleth, OpenAthens, and IP authentication.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/astm-international.png
 tags:
   - Standards
   - Standards Development Organization
@@ -29,7 +40,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/astm-international/refs/heads/main/apis.yml
 created: '2026-05-23'
-modified: '2026-05-23'
+modified: '2026-07-25'
 specificationVersion: '0.19'
 apis:
   - aid: astm-international:astm-compass
@@ -67,52 +78,6 @@ apis:
       - type: PressRelease
         url: https://www.astm.org/news/press-releases/astm-expands-compass-access
         title: ASTM Expands Access to Compass Platform
-  - aid: astm-international:astm-standards-catalog
-    name: ASTM Standards Catalog
-    description: >-
-      The ASTM Standards Catalog is the canonical inventory of 13,000+ ASTM
-      consensus standards organized by technical committee designation
-      (A through G, plus J joint committees). Each standard carries a
-      designation in the form Letter+Number-Year (for example C150-23,
-      D695-23, E8/E8M-22). Standards are categorized into six normative
-      document types: Test Method, Specification, Practice, Guide,
-      Classification, and Terminology. The catalog is browsable on the
-      ASTM store and ASTM Compass; bulk programmatic access is not offered.
-    humanURL: https://store.astm.org/products-services/standards-and-publications/standards/standards-category-list.html
-    tags:
-      - Standards
-      - Catalog
-      - Designation System
-      - Technical Committees
-      - Document Types
-    properties:
-      - type: Documentation
-        url: https://store.astm.org/products-services/standards-and-publications/standards/standards-category-list.html
-      - type: FormAndStyle
-        url: https://www.astm.org/membership-participation/technical-committees/key-documents/form-and-style-for-astm-standards
-        title: Form and Style for ASTM Standards (defines the six standard types)
-      - type: TechnicalCommittees
-        url: https://www.astm.org/membership-participation/technical-committees/committee-all
-        title: Full list of ASTM Technical Committees
-  - aid: astm-international:astm-digital-library
-    name: ASTM Digital Library
-    description: >-
-      The ASTM Digital Library is the historical archive of ASTM-published
-      books, technical papers, manuals, monographs, journals, and Selected
-      Technical Papers (STPs) dating back to 1932. The library aggregates
-      1,500+ books and 47,000+ articles and is accessed through ASTM Compass
-      or direct subscription. Integration uses the same identity surfaces as
-      Compass; no programmatic search API is documented publicly.
-    humanURL: https://www.astm.org/products-services/digital-library
-    tags:
-      - Digital Library
-      - Books
-      - Journals
-      - Technical Papers
-      - Archive
-    properties:
-      - type: Documentation
-        url: https://www.astm.org/products-services/digital-library
   - aid: astm-international:astm-specbuilder
     name: ASTM SpecBuilder
     description: >-
@@ -129,41 +94,6 @@ apis:
     properties:
       - type: Documentation
         url: https://www.astm.org/standards-and-solutions/enterprise-solutions
-  - aid: astm-international:astm-proficiency-testing
-    name: ASTM Proficiency Testing Programs
-    description: >-
-      ASTM operates more than 25 interlaboratory proficiency testing (PT)
-      programs covering petroleum products, cement, plastics, and other
-      materials. Labs subscribe to receive samples, submit results, and
-      receive statistical reports benchmarked against peers. PT results are
-      delivered through ASTM's proficiency testing portal; no public REST
-      API is published.
-    humanURL: https://www.astm.org/products-services/proficiency-testing-programs
-    tags:
-      - Proficiency Testing
-      - Interlaboratory
-      - Laboratory Services
-      - Quality
-    properties:
-      - type: Documentation
-        url: https://www.astm.org/products-services/proficiency-testing-programs
-  - aid: astm-international:astm-training-and-certification
-    name: ASTM Training and Certification
-    description: >-
-      ASTM operates a global training and personnel certification program
-      across additive manufacturing (via the AM CoE with Auburn University),
-      cannabis, cement, and other technical domains. Training is delivered
-      in-person, virtually, and on-demand; certifications follow ISO/IEC
-      17024-aligned conformity assessment processes.
-    humanURL: https://www.astm.org/products-services/training-courses
-    tags:
-      - Training
-      - Certification
-      - Personnel Certification
-      - Conformity Assessment
-    properties:
-      - type: Documentation
-        url: https://www.astm.org/products-services/training-courses
 common:
   - type: DomainSecurity
     url: security/astm-international-domain-security.yml
