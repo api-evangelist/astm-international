@@ -43,6 +43,17 @@ tags:
   - Consensus Standards
   - Technical Committees
   - Materials Testing
+  - Specification
+  - Test Methods
+  - Certification
+  - Voluntary Standards
+  - International
+tags_raw:
+  - Standards
+  - Standards Development Organization
+  - Consensus Standards
+  - Technical Committees
+  - Materials Testing
   - Specifications
   - Test Methods
   - Certification
@@ -69,6 +80,14 @@ apis:
     humanURL: https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass
     baseURL: https://compass.astm.org
     tags:
+      - Standards
+      - Digital Library
+      - Subscription
+      - Redlines
+      - Change Alerts
+      - Annotation
+      - Enterprise Solutions
+    tags_raw:
       - Standards
       - Digital Library
       - Subscription
