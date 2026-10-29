@@ -64,106 +64,128 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-API Evangelist profile of **ASTM International** — one of the world's largest voluntary consensus standards development organizations. Founded in 1898, ASTM publishes more than **13,000 globally recognized standards** developed by **30,000+ volunteer members** sitting on **150+ technical committees** and **2,100+ subcommittees** across **140+ countries**, with MoUs in place with **125 national standards bodies**.
+ASTM International is one of the world's largest voluntary standards development organizations, founded in 1898. ASTM publishes more than 13,000 globally recognized consensus standards across 150+ technical committees and 2,100+ subcommittees, developed by 30,000+ volunteer members from 140+ countries. ASTM standards span ferrous and nonferrous metals, cement and concrete, petroleum, plastics, textiles, additive manufacturing, medical devices, consumer products, unmanned aircraft, artificial intelligence in manufacturing, and dozens of other domains. Standards are delivered through the ASTM Compass platform, ASTM Digital Library, ASTM SpecBuilder, and through publisher and reseller channels. ASTM does not publish a public REST API for its catalog; integration with Compass is via SAML SSO, Shibboleth, OpenAthens, and IP authentication.
 
-> "Combining 13,000+ standards with 1,500+ books and 47,000+ articles and papers plus custom workflow tools, ASTM Compass provides one of the most comprehensive libraries of technical information available."  — *ASTM International*
+**Areas:** Standards · Standards Development Organization · Consensus Standards · Technical Committees · Materials Testing · Specification · Test Methods · Certification · Voluntary Standards · International
 
-This is a `standard`-mode pipeline run. ASTM is profiled here as a standards body and content platform, not as a developer-API provider — ASTM publishes no public REST API, OpenAPI spec, GitHub organization, RSS feed, or webhooks for its catalog or for the ASTM Compass platform.
+## ASTM International on APIs.io
 
-## What is documented
+Everything profiled for ASTM International is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/astm-international/](https://apis.io/providers/astm-international/)** — or go straight to one of the APIs or properties below.
 
-- The ASTM organization, its scale, and its governance posture
-- The **ASTM Compass** subscription platform (workflow, redlines, alerts, SSO surfaces)
-- The **ASTM Standards Catalog** and the canonical designation system
-- The **ASTM Digital Library**, **SpecBuilder**, **Proficiency Testing**, and **Training & Certification** surfaces
-- The six normative ASTM document types and the A-G + J committee letter-prefix taxonomy
-- Identity integrations: SAML, Shibboleth, OpenAthens, IP-range authentication
+### APIs (2)
 
-## Repository layout
+- [ASTM Compass](https://apis.io/apis/astm-international/astm-compass/) — ASTM Compass is the subscription digital library and workflow platform that delivers ASTM standards alongside third-party publisher content (AASHTO, API,…
+- [ASTM SpecBuilder](https://apis.io/apis/astm-international/astm-specbuilder/) — ASTM SpecBuilder is a tool for assembling, packaging, and delivering customized digital collections of ASTM standards content for enterprise teams and…
 
-| File | What it is |
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (3)
+
+The data models the API reads and writes.
+
+- [ASTM Compass Subscription](https://apis.io/schemas/astm-international/astm-compass-subscription/)
+- [ASTM Standard](https://apis.io/schemas/astm-international/astm-standard/)
+- [ASTM Technical Committee](https://apis.io/schemas/astm-international/astm-technical-committee/)
+
+#### JSON Structure (2)
+
+Data models expressed in JSON Structure.
+
+- [Astm Standard Structure](https://apis.io/json-structure/astm-international/astm-standard-structure/)
+- [Astm Technical Committee Structure](https://apis.io/json-structure/astm-international/astm-technical-committee-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Astm International Context](https://apis.io/jsonld/astm-international/astm-international-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [ASTM International Vocabulary](https://apis.io/vocabularies/astm-international/astm-international-vocabulary/)
+
+#### Examples (6)
+
+Example requests and responses.
+
+- [Astm Compass Subscription Example](https://apis.io/examples/astm-international/astm-compass-subscription-example/)
+- [Astm Standard C150 Example](https://apis.io/examples/astm-international/astm-standard-c150-example/)
+- [Astm Standard E8 Example](https://apis.io/examples/astm-international/astm-standard-e8-example/)
+- [Astm Standard F3001 Example](https://apis.io/examples/astm-international/astm-standard-f3001-example/)
+- [Astm Technical Committee C01 Example](https://apis.io/examples/astm-international/astm-technical-committee-c01-example/)
+- [Astm Technical Committee F42 Example](https://apis.io/examples/astm-international/astm-technical-committee-f42-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [ASTM International — jsonschema rules](https://apis.io/rules/astm-international/astm-international-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Astm International Domain Security](https://apis.io/security/astm-international/astm-international-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.astm.org)
+
+## API Evangelist rating
+
+**Kin Score 13.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `apis.yml` | Root apis.yml inventory: 6 ASTM surfaces (Compass, Standards Catalog, Digital Library, SpecBuilder, Proficiency Testing, Training & Certification), 22 common properties, features, use cases, integrations, scale numbers, notable absences. |
-| `json-schema/astm-standard-schema.json` | JSON Schema for a single ASTM standard catalog record (designation, committee, document type, lifecycle, references). |
-| `json-schema/astm-technical-committee-schema.json` | JSON Schema for an ASTM technical committee / subcommittee. |
-| `json-schema/astm-compass-subscription-schema.json` | JSON Schema for an ASTM Compass subscription, including identity integration. |
-| `json-structure/astm-standard-structure.json` | JSON Structure form of the ASTM Standard record. |
-| `json-structure/astm-technical-committee-structure.json` | JSON Structure form of the ASTM Technical Committee record. |
-| `json-ld/astm-international-context.jsonld` | JSON-LD context mapping ASTM terms onto schema.org, SKOS, Dublin Core, and FOAF. |
-| `examples/astm-standard-c150-example.json` | Real example: Portland cement spec (C150/C150M-23). |
-| `examples/astm-standard-e8-example.json` | Real example: tensile-test method (E8/E8M-22). |
-| `examples/astm-standard-f3001-example.json` | Real example: AM Ti-6Al-4V ELI spec (F3001-14R21). |
-| `examples/astm-technical-committee-c01-example.json` | Real example: Committee C01 (Cement). |
-| `examples/astm-technical-committee-f42-example.json` | Real example: Committee F42 (Additive Manufacturing). |
-| `examples/astm-compass-subscription-example.json` | Synthetic example: enterprise Compass subscription with SAML/Okta. |
-| `vocabulary/astm-international-vocabulary.yml` | Controlled vocabulary: document types, committee categories, designation format, lifecycle states, platforms, participation roles, identity integrations, scale figures. |
+| Discoverability | 58.0 |
+| Contract quality | 14.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 6.6 |
 
-## ASTM document types
+**Agent readiness 0.0** — human-only
 
-Defined in *Form and Style for ASTM Standards*. Every published ASTM standard is exactly one of these:
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-1. **Test Method** — "a definitive procedure that produces a test result"
-2. **Specification** — "an explicit set of requirements to be satisfied by a material, product, system, or service"
-3. **Practice** — "a set of instructions for performing one or more specific operations that does not produce a test result"
-4. **Guide** — "a compendium of information or series of options that does not recommend a specific course of action"
-5. **Classification** — "a systematic arrangement or division of materials, products, systems, or services into groups based on similar characteristics"
-6. **Terminology** — "a document comprising definitions of terms; explanations of symbols, abbreviations, or acronyms"
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
 
-## Committee letter-prefix taxonomy
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/astm-international/](https://apis.io/providers/astm-international/).
 
-Standards inherit their letter prefix from the owning committee.
+## How this profile is made
 
-| Letter | Domain | Example committees |
-|---|---|---|
-| **A** | Ferrous metals and products | A01 Steel; A04 Iron Castings; A06 Magnetic Properties |
-| **B** | Nonferrous metals and products | B01 Electrical Conductors; B05 Copper Alloys; B09 Metal Powders |
-| **C** | Cementitious, ceramic, concrete, and masonry | C01 Cement; C09 Concrete; C28 Advanced Ceramics |
-| **D** | Miscellaneous materials and products | D02 Petroleum; D20 Plastics; D22 Air Quality; D37 Cannabis and Hemp |
-| **E** | Miscellaneous subjects | E07 NDT; E28 Mechanical Testing; E31 Healthcare Informatics; E60 Sustainability |
-| **F** | End-use materials and products | F04 Medical Devices; F38 UAS; F42 Additive Manufacturing; F50 AI in Manufacturing |
-| **G** | Corrosion, weathering, durability | G01 Corrosion of Metals; G03 Weathering and Durability |
-| **J** | Joint committees | J01 Joint ASTM/NACE Committee on Corrosion |
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Designation format
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ASTM International: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-```
-{Letter}{Number}[/{Number}M]-{YY}[(YYYY)]
-```
+## Open an issue
 
-- `C150-23` — Specification for Portland Cement, 2023 edition
-- `C150/C150M-23` — Same standard, dual US-customary and SI-metric units
-- `E8/E8M-22` — Tension Testing of Metallic Materials, 2022 edition
-- `F3001-14(2021)` — AM Ti-6Al-4V ELI Spec, 2014 edition reapproved 2021
-
-## ASTM Compass
-
-ASTM Compass is the canonical subscription delivery platform for ASTM content.
-
-- **Catalog**: 13,000+ standards, 1,500+ books, 47,000+ articles and papers, 300+ video standards, plus third-party publisher content from AASHTO, API, BSI, and others.
-- **Workflow tools**: redlines (color-coded version comparison), change alerts, annotations with images and attachments, sharing, Compass Points metadata tagging.
-- **Identity**: SAML 2.0 (any IdP), Shibboleth, OpenAthens, IP-range authentication. Customer implementations include Okta-based SSO.
-- **Access URLs**: [compass.astm.org](https://compass.astm.org) for end users; sales-quoted enterprise pricing — no public price list.
-
-## Notable absences
-
-- No public **REST API** for the standards catalog, Compass content, or proficiency testing results
-- No public **GitHub organization** for ASTM International
-- No published **OpenAPI** or **AsyncAPI** specifications
-- No public **pricing page** for Compass or Digital Library
-- No public **RSS / Atom feeds** for press releases or standards updates
-- No outbound **webhooks** — change alerts are delivered inside Compass and by email only
-
-## Sources
-
-- [ASTM International](https://www.astm.org) — homepage
-- [About ASTM](https://www.astm.org/about)
-- [Technical Committees — Full List](https://www.astm.org/membership-participation/technical-committees/committee-all)
-- [Form and Style for ASTM Standards](https://www.astm.org/membership-participation/technical-committees/key-documents/form-and-style-for-astm-standards)
-- [Standards and Publications](https://store.astm.org/products-services/standards-and-publications/standards.html)
-- [ASTM Compass (Enterprise Solutions)](https://www.astm.org/standards-and-solutions/enterprise-solutions/astm-compass)
-- [ASTM Compass Application](https://compass.astm.org)
-- [ASTM Expands Access to Compass Platform](https://www.astm.org/news/press-releases/astm-expands-compass-access)
-
----
-
-Profiled by [API Evangelist](https://apievangelist.com) — `astm-international`, pipeline mode `standard`, profiled 2026-05-23.
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/astm-international/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
